@@ -9,5 +9,7 @@ type PhraseReq struct {
 	QueryString string `v:"required|length:4,12"`
 }
 type PhraseRes struct {
-	g.Meta `mime:"text/html" example:"string"`
+	g.Meta  `mime:"text/html" example:"string"`
+	Phrase  string
+	Explain string
 }

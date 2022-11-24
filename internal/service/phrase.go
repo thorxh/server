@@ -10,7 +10,7 @@ import (
 )
 
 type IPhrase interface {
-	Query(ctx context.Context, in model.PhraseQueryInput) (err error)
+	Query(ctx context.Context, in model.PhraseQueryInput) (PhraseExplain string, err error)
 }
 
 var localPhrase IPhrase

@@ -4,8 +4,6 @@ import (
 	"context"
 	"server/internal/model"
 	"server/internal/service"
-
-	"github.com/gogf/gf/v2/errors/gerror"
 )
 
 type (
@@ -21,7 +19,7 @@ func New() *sPhrase {
 }
 
 // Query query phrase.
-func (s *sPhrase) Query(ctx context.Context, in model.PhraseQueryInput) (err error) {
+func (s *sPhrase) Query(ctx context.Context, in model.PhraseQueryInput) (PhraseExplain string, err error) {
 	phrase := QueryPhrase(in.QueryString)
-	return gerror.Newf(`%s: %s`, in.QueryString, phrase)
+	return phrase, nil
 }

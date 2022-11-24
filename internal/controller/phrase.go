@@ -15,8 +15,16 @@ var (
 type cPhrase struct{}
 
 func (c *cPhrase) Phrase(ctx context.Context, req *v1.PhraseReq) (res *v1.PhraseRes, err error) {
-	err = service.Phrase().Query(ctx, model.PhraseQueryInput{
+	var PhraseExplain string
+	PhraseExplain, err = service.Phrase().Query(ctx, model.PhraseQueryInput{
 		QueryString: req.QueryString,
 	})
+	if err != nil {
+		return nil, err
+	}
+	res = &v1.PhraseRes{
+		Phrase:  req.QueryString,
+		Explain: PhraseExplain,
+	}
 	return
 }
