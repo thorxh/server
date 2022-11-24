@@ -6,10 +6,11 @@ package service
 
 import (
 	"context"
+	"server/internal/model"
 )
 
 type IPhrase interface {
-	Query(ctx context.Context) (err error)
+	Query(ctx context.Context, in model.PhraseQueryInput) (err error)
 }
 
 var localPhrase IPhrase
@@ -21,6 +22,6 @@ func Phrase() IPhrase {
 	return localPhrase
 }
 
-func RegisterUser(i IPhrase) {
+func RegisterPhrase(i IPhrase) {
 	localPhrase = i
 }

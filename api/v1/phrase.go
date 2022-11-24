@@ -5,7 +5,8 @@ import (
 )
 
 type PhraseReq struct {
-	g.Meta `path:"/phrase" tags:"Phrase" method:"get" summary:"query phrase"`
+	g.Meta      `path:"/phrase" tags:"Phrase" method:"get" summary:"query phrase"`
+	QueryString string `v:"required|length:4,12"`
 }
 type PhraseRes struct {
 	g.Meta `mime:"text/html" example:"string"`
