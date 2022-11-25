@@ -1,13 +1,13 @@
 package main
 
 import (
+	_ "gitee.com/thorxh/thor-api/internal/logic"
+	_ "gitee.com/thorxh/thor-api/internal/packed"
 	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
-	_ "server/internal/logic"
-	_ "server/internal/packed"
 
 	"github.com/gogf/gf/v2/os/gctx"
 
-	"server/internal/cmd"
+	"gitee.com/thorxh/thor-api/internal/cmd"
 )
 
 func main() {

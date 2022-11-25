@@ -5,7 +5,7 @@
 package dao
 
 import (
-	"server/internal/dao/internal"
+	"gitee.com/thorxh/thor-api/internal/dao/internal"
 )
 
 // internalPhraseDao is internal type for wrapping internal DAO implements.

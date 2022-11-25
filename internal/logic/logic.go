@@ -5,5 +5,5 @@
 package logic
 
 import (
-	_ "server/internal/logic/phrase"
+	_ "gitee.com/thorxh/thor-api/internal/logic/phrase"
 )

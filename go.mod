@@ -1,4 +1,4 @@
-module server
+module gitee.com/thorxh/thor-api
 
 go 1.15
 

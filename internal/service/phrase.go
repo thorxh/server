@@ -7,7 +7,8 @@ package service
 
 import (
 	"context"
-	"server/internal/model"
+
+	"gitee.com/thorxh/thor-api/internal/model"
 )
 
 type (

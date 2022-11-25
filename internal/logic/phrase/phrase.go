@@ -2,10 +2,10 @@ package phrase
 
 import (
 	"context"
-	"server/internal/dao"
-	"server/internal/model"
-	"server/internal/model/do"
-	"server/internal/service"
+	"gitee.com/thorxh/thor-api/internal/dao"
+	"gitee.com/thorxh/thor-api/internal/model"
+	"gitee.com/thorxh/thor-api/internal/model/do"
+	"gitee.com/thorxh/thor-api/internal/service"
 )
 
 type (

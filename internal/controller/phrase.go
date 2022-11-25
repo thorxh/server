@@ -2,10 +2,10 @@ package controller
 
 import (
 	"context"
-	"server/internal/model"
-	"server/internal/service"
+	"gitee.com/thorxh/thor-api/internal/model"
+	"gitee.com/thorxh/thor-api/internal/service"
 
-	"server/api/v1"
+	"gitee.com/thorxh/thor-api/api/v1"
 )
 
 var (
