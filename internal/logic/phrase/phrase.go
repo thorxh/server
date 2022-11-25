@@ -2,7 +2,9 @@ package phrase
 
 import (
 	"context"
+	"server/internal/dao"
 	"server/internal/model"
+	"server/internal/model/do"
 	"server/internal/service"
 )
 
@@ -20,6 +22,13 @@ func New() *sPhrase {
 
 // Query query phrase.
 func (s *sPhrase) Query(ctx context.Context, in model.PhraseQueryInput) (PhraseExplain string, err error) {
-	phrase := QueryPhrase(in.QueryString)
-	return phrase, nil
+	phrase := in.QueryString
+	explain := QueryPhrase(phrase)
+
+	_, err = dao.Phrase.Ctx(ctx).Data(do.Phrase{
+		Phrase:  phrase,
+		Explain: explain,
+	}).Insert()
+
+	return explain, nil
 }

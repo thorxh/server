@@ -1,11 +1,12 @@
 server:
-  address:     ":8000"
+  address: ":80"
   openapiPath: "/api.json"
   swaggerPath: "/swagger"
 
 logger:
-  level : "all"
+  level: "all"
   stdout: true
 
-
-
+database:
+  default:
+    link: "mysql:admin:ebf2fd1e-ec7e-11eb-9167-00d86152d510@tcp(81.69.41.65:3785)/thorxh?loc=Local&parseTime=true"
